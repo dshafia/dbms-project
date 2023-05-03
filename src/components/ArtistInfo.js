@@ -26,6 +26,7 @@ const ArtistInfo = ({artistId}) => {
         
         axios.request(options)
           .then(response => {
+            console.log('From Spotify DB API: Artist Info: ', response.data);
             setArtistInfo(response.data);
           })
           .catch(error => {

@@ -17,6 +17,7 @@ const HomePage = () => {
 
     axios.request(options)
       .then(response => {
+        console.log('From Spotify DB API: Top 10 Artists: ', response.data.artists.slice(0, 10));
         setTopArtists(response.data.artists.slice(0, 10));
       })
       .catch(error => {
